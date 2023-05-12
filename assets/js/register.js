@@ -45,6 +45,10 @@ function register(formSelector) {
                 return value.length >= min ? undefined : `Vui lòng nhập ít nhất ${min} kí tự vào đây`;
             }
         },
+        confirmPassword: function (value) {
+            const password = document.getElementById('password').value;
+            return value === password ? undefined : 'Mật khẩu không trùng khớp, mời bạn nhập lại.'
+        }
     }
 
     // Lấy ra element trong DOM theo formSelecter
